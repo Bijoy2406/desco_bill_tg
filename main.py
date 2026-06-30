@@ -163,18 +163,24 @@ def fetch_desco_data(customer_id, loop=None, progress_callback=None):
             }
             asyncio.run_coroutine_threadsafe(progress_callback(partial_data), loop)
 
-        # SMART POLLING LOOP FOR SLOW DATA
-        logger.info("Waiting for slow historical data table to populate...")
-        max_wait = 60
+        # SMART POLLING LOOP FOR HISTORICAL DATA TABLES
+        logger.info("Waiting for slow historical elements and comparative tables to populate...")
+        max_wait = 30
         elapsed = 0
 
         while elapsed < max_wait:
             page_text = driver.find_element(By.TAG_NAME, "body").text
-            if re.search(r"Last Recharge:\s*\d+", page_text):
-                time.sleep(2) # Give structural tables extra space to fully mount
+            
+            # Check if BOTH the recharge block and comparative tables are available in structural text
+            if re.search(r"Last Recharge:\s*\d+", page_text) and "Consumed Taka" in page_text:
+                logger.info(f"All dynamic tables successfully populated after {elapsed} seconds!")
+                time.sleep(1.5) # Structural buffer sleep to let rows settle completely
                 break
+                
             time.sleep(2)
             elapsed += 2
+        else:
+            logger.warning(f"Reached {max_wait}s polling window timeout. Proceeding with available structural elements.")
 
         # PREDICTIVE ALGORITHM EXTRACTION: Read the Comparative Data Table
         days_remaining_str = "N/A"
@@ -223,7 +229,7 @@ def fetch_desco_data(customer_id, loop=None, progress_callback=None):
             "last_recharge": last_recharge,
             "usage_this_month": usage_month,
             "max_load": max_load,
-            "days_remaining": days_remaining_str, # Captured prediction metric
+            "days_remaining": days_remaining_str, 
             "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         }
 
@@ -236,7 +242,6 @@ def fetch_desco_data(customer_id, loop=None, progress_callback=None):
     finally:
         if driver:
             driver.quit()
-
 # --- BOT ONBOARDING & COMMAND HANDLERS ---
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
