@@ -101,7 +101,7 @@ def save_json_file(filepath, data):
 
 def fetch_desco_data(customer_id, loop=None, progress_callback=None):
     """
-    Scrapes the DESCO portal using Selenium with a dynamic Customer ID.
+    Scrapes the DESCO portal using Selenium with a dynamic Customer ID and predicts days remaining.
     """
     chrome_options = Options()
     chrome_options.add_argument("--headless")
@@ -164,25 +164,42 @@ def fetch_desco_data(customer_id, loop=None, progress_callback=None):
             asyncio.run_coroutine_threadsafe(progress_callback(partial_data), loop)
 
         # SMART POLLING LOOP FOR SLOW DATA
-        logger.info("Waiting for slow historical data (Last Recharge) to populate...")
+        logger.info("Waiting for slow historical data table to populate...")
         max_wait = 60
         elapsed = 0
 
         while elapsed < max_wait:
             page_text = driver.find_element(By.TAG_NAME, "body").text
-            
             if re.search(r"Last Recharge:\s*\d+", page_text):
-                logger.info(f"Last Recharge data successfully populated after {elapsed} seconds!")
-                time.sleep(1) 
-                page_text = driver.find_element(By.TAG_NAME, "body").text
+                time.sleep(2) # Give structural tables extra space to fully mount
                 break
-                
             time.sleep(2)
             elapsed += 2
-        else:
-            logger.warning(f"Reached {max_wait}s timeout. Last Recharge might genuinely be N/A.")
+
+        # PREDICTIVE ALGORITHM EXTRACTION: Read the Comparative Data Table
+        days_remaining_str = "N/A"
+        try:
+            # Locate the comparative data table rows directly
+            table_rows = driver.find_elements(By.XPATH, "//table[contains(., 'Consumed Taka')]//tbody//tr")
+            if table_rows:
+                # The first row inside tbody holds the data for the most recent/current month
+                first_row_cells = table_rows[0].find_elements(By.TAG_NAME, "td")
+                if len(first_row_cells) >= 2:
+                    # Cell 1 is Month (e.g. "Jun 26"), Cell 2 is Consumed Taka
+                    consumed_taka_text = first_row_cells[1].text.strip().replace(',', '')
+                    consumed_taka = float(consumed_taka_text) if consumed_taka_text else 0.0
+                    
+                    current_day = datetime.now().day
+                    if current_day > 0 and consumed_taka > 0:
+                        daily_burn_rate = consumed_taka / current_day
+                        predicted_days = balance / daily_burn_rate
+                        days_remaining_str = f"~{round(predicted_days, 1)} days"
+                        logger.info(f"Prediction successful. Taka Spent: {consumed_taka}, Burn Rate: {round(daily_burn_rate, 2)} Tk/day")
+        except Exception as table_err:
+            logger.warning(f"Failed parsing comparative data table for burn predictions: {table_err}")
 
         # FINAL DATA EXTRACTION
+        page_text = driver.find_element(By.TAG_NAME, "body").text
         recharge_amt_match = re.search(r"Last Recharge:\s*([\s\S]*?)\s*(?=Recharge time)", page_text)
         recharge_time_match = re.search(r"Recharge time:\s*([\s\S]*?)\s*(?=Remaining Balance|Reading time|Used This Month|Max load|$)", page_text)
 
@@ -194,26 +211,23 @@ def fetch_desco_data(customer_id, loop=None, progress_callback=None):
         if not r_time or r_time.lower() == "n/a":
             r_time = ""
 
-        if r_time:
-            last_recharge = f"{amt} (Time: {r_time})"
-        else:
-            last_recharge = amt
+        last_recharge = f"{amt} (Time: {r_time})" if r_time else amt
 
         max_load = "N/A"
         max_load_match = re.search(r"Max load last month:\s*([^\n]+)", page_text)
         if max_load_match:
             max_load = max_load_match.group(1).strip()
 
-        # balance = 50.0  # Commented out for production
         data = {
             "balance": balance,
             "last_recharge": last_recharge,
             "usage_this_month": usage_month,
             "max_load": max_load,
+            "days_remaining": days_remaining_str, # Captured prediction metric
             "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         }
 
-        logger.info(f"Successfully fetched complete DESCO data. Balance: {balance}")
+        logger.info(f"Successfully fetched complete DESCO data. Balance: {balance}, Predicted Time: {days_remaining_str}")
         return data
 
     except Exception as e:
@@ -302,6 +316,7 @@ async def balance_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
             f"📊 **Current DESCO Balance**\n"
             f"🆔 Account: {customer_id}\n"
             f"💰 Balance: {partial_data['balance']} BDT\n"
+            f"⏳ Est. Time Remaining: *Calculating runtime predictions...*\n"
             f"🔋 Last Recharge: ⏳ *Fetching history...*\n"
             f"📈 Usage This Month: {partial_data['usage_this_month']}\n"
             f"⏱️ Checked at: {partial_data['timestamp']}"
@@ -322,6 +337,7 @@ async def balance_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"📊 **Current DESCO Balance**\n"
         f"🆔 Account: {customer_id}\n"
         f"💰 Balance: {data['balance']} BDT\n"
+        f"⏳ **Est. Time Remaining: {data['days_remaining']}** 💡\n"
         f"🔋 Last Recharge: {data['last_recharge']}\n"
         f"📈 Usage This Month: {data['usage_this_month']}\n"
         f"⏱️ Checked at: {data['timestamp']}"
@@ -378,6 +394,7 @@ async def stats_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"🆔 Account: {customer_id}\n"
         f"🔔 Current Alert Threshold: {threshold} BDT\n"
         f"💰 Current Balance: {data['balance']} BDT\n"
+        f"⏳ **Est. Time Remaining: {data['days_remaining']}**\n"
         f"🔋 Last Recharge Date/Amount: {data['last_recharge']}\n"
         f"⚡ Usage This Month: {data['usage_this_month']}\n"
         f"📈 Max Load: {data['max_load']}"
@@ -407,11 +424,14 @@ async def check_balances_job(context: ContextTypes.DEFAULT_TYPE):
             continue
 
         current_balance = data.get("balance", 0.0)
+        days_remaining = data.get("days_remaining", "N/A")
+        
         if current_balance < threshold:
             warning_msg = (
-                f"⚠️ **LOW BALANCE ALERT** ⚠️\n"
+                f"⚠️ **LOW BALANCE ALERT** ⚠️\n\n"
                 f"Your DESCO balance has dropped below your threshold of {threshold} BDT.\n"
-                f"Current Balance: **{current_balance} BDT**\n"
+                f"💰 Current Balance: **{current_balance} BDT**\n"
+                f"⏳ **Est. Time Remaining: {days_remaining}** 💡\n\n"
                 f"Please recharge soon to avoid disconnection."
             )
             try:

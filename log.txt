@@ -1671,3 +1671,548 @@ Stacktrace:
 2026-06-30 17:00:52,463 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
 2026-06-30 17:01:02,702 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
 2026-06-30 17:01:12,943 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:01:23,183 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:01:33,377 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:01:43,663 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:01:54,068 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:02:04,267 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:02:14,460 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:02:24,726 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:02:34,963 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:02:45,206 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:02:55,447 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:03:05,687 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:03:15,904 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:03:26,106 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:03:36,299 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:03:46,545 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:03:56,739 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:04:06,933 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:04:17,163 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:04:27,356 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:04:37,552 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:04:47,780 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:04:58,021 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:05:08,216 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:05:18,501 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:05:28,741 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:05:40,007 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:05:50,252 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:06:00,485 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:06:10,725 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:06:20,966 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:06:31,206 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:06:41,448 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:06:51,647 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:07:01,842 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:07:12,035 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:07:22,229 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:07:32,442 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:07:42,645 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:07:52,839 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:08:03,035 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:08:13,227 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:08:18,215 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:08:18,225 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2026-06-30 17:08:18,230 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-06-30 17:08:18,239 - telegram.ext.Application - INFO - Application.stop() complete
+2026-06-30 17:08:18,242 - __main__ - INFO - Scheduler loop destroyed.
+2026-06-30 17:08:18,242 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-06-30 17:54:15,891 - __main__ - INFO - Starting background web server for Render keep-alive monitoring...
+2026-06-30 17:54:15,895 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.105:8080
+2026-06-30 17:54:15,895 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-06-30 17:54:16,019 - __main__ - INFO - Bot is initializing structural interfaces...
+2026-06-30 17:54:16,591 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getMe "HTTP/1.1 200 OK"
+2026-06-30 17:54:16,602 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-30 17:54:16,602 - apscheduler.scheduler - INFO - Added job "check_balances_job" to job store "default"
+2026-06-30 17:54:16,602 - apscheduler.scheduler - INFO - Scheduler started
+2026-06-30 17:54:16,602 - __main__ - INFO - Multi-user scheduler initialized successfully.
+2026-06-30 17:54:16,789 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/deleteWebhook "HTTP/1.1 200 OK"
+2026-06-30 17:54:16,798 - apscheduler.scheduler - INFO - Scheduler started
+2026-06-30 17:54:16,798 - telegram.ext.Application - INFO - Application started
+2026-06-30 17:54:21,772 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 409 Conflict"
+2026-06-30 17:54:21,772 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_utils/networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_utils/networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-06-30 17:54:27,631 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 409 Conflict"
+2026-06-30 17:54:27,631 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_utils/networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_utils/networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-06-30 17:54:34,783 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 409 Conflict"
+2026-06-30 17:54:34,784 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_utils/networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_utils/networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-06-30 17:54:41,479 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 409 Conflict"
+2026-06-30 17:54:41,479 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_utils/networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_utils/networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-06-30 17:54:49,671 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 409 Conflict"
+2026-06-30 17:54:49,671 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_utils/networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_utils/networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-06-30 17:55:00,425 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 409 Conflict"
+2026-06-30 17:55:00,426 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_utils/networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_utils/networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-06-30 17:55:12,880 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 409 Conflict"
+2026-06-30 17:55:12,881 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_utils/networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_utils/networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-06-30 17:55:29,095 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 409 Conflict"
+2026-06-30 17:55:29,096 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_utils/networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_utils/networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-06-30 17:55:50,954 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 409 Conflict"
+2026-06-30 17:55:50,955 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_utils/networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_utils/networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 4767, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 712, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/ext/_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/_bot.py", line 741, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/salman/desco_bill/venv/lib/python3.14/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-06-30 17:56:17,224 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8901010510:AAHzcAGpRyRM0Pqp8yfo7K7hjWcZ5hcjL0o/getUpdates "HTTP/1.1 200 OK"
+2026-06-30 17:56:17,225 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2026-06-30 17:56:17,225 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-06-30 17:56:17,235 - telegram.ext.Application - INFO - Application.stop() complete
+2026-06-30 17:56:17,235 - __main__ - INFO - Scheduler loop destroyed.
+2026-06-30 17:56:17,235 - apscheduler.scheduler - INFO - Scheduler has been shut down

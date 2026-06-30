@@ -1,0 +1,18 @@
+# Environments
+.env
+venv/
+env/
+
+# Logs and databases
+log.txt
+*.log
+*.sqlite3
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# User Data
+users.json
+alerts.json
