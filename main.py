@@ -150,10 +150,19 @@ def fetch_desco_data(customer_id, loop=None, progress_callback=None):
             balance = float(balance_match.group(1).replace(',', ''))
 
         usage_month = "N/A"
-        usage_match = re.search(r"Used This Month:\s*([^\n]+)", page_text)
-        if usage_match:
-            usage_clean = re.split(r"(?=Recharged This|Max load)", usage_match.group(1))[0]
-            usage_month = usage_clean.strip()
+        usage_taka_this_month = None
+        usage_block_match = re.search(
+            r"Used This Month:\s*([\s\S]*?)(?=Recharged This|Max load|Consumer Information|Suggested Recharge|$)",
+            page_text
+        )
+        if usage_block_match:
+            usage_block = usage_block_match.group(1)
+            kwh_match = re.search(r"([\d,.]+)\s*kWh", usage_block)
+            if kwh_match:
+                usage_month = f"{kwh_match.group(1)} kWh"
+            taka_match = re.search(r"in BDT:\s*([\d,.]+)", usage_block)
+            if taka_match:
+                usage_taka_this_month = float(taka_match.group(1).replace(',', ''))
 
         if loop and progress_callback:
             partial_data = {
@@ -182,27 +191,53 @@ def fetch_desco_data(customer_id, loop=None, progress_callback=None):
         else:
             logger.warning(f"Reached {max_wait}s polling window timeout. Proceeding with available structural elements.")
 
-        # PREDICTIVE ALGORITHM EXTRACTION: Read the Comparative Data Table
+        # PREDICTIVE ALGORITHM EXTRACTION: month-to-date Taka usage / elapsed days
         days_remaining_str = "N/A"
         try:
-            # Using an optimized XPath to look for any table with "Consumed" anywhere in its structural header text
-            table_rows = driver.find_elements(By.XPATH, "//table[contains(., 'Consumed')]//tbody//tr")
-            if table_rows:
-                # The first row inside tbody holds the data for the most recent/current month
-                first_row_cells = table_rows[0].find_elements(By.TAG_NAME, "td")
-                if len(first_row_cells) >= 2:
-                    # Cell 1 is Month (e.g. "Jun 26"), Cell 2 is Consumed Taka
-                    consumed_taka_text = first_row_cells[1].text.strip().replace(',', '')
-                    consumed_taka = float(consumed_taka_text) if consumed_taka_text else 0.0
-                    
-                    current_day = datetime.now().day
-                    if current_day > 0 and consumed_taka > 0:
-                        daily_burn_rate = consumed_taka / current_day
-                        predicted_days = balance / daily_burn_rate
-                        days_remaining_str = f"~{round(predicted_days, 1)} days"
-                        logger.info(f"Prediction successful. Taka Spent: {consumed_taka}, Burn Rate: {round(daily_burn_rate, 2)} Tk/day")
+            current_day = datetime.now().day
+            daily_burn_rate = None
+
+            # Primary: live "Used This Month ... in BDT" counter — always current, even day 1 of month
+            if usage_taka_this_month and usage_taka_this_month > 0 and current_day > 0:
+                daily_burn_rate = usage_taka_this_month / current_day
+                logger.info(f"Burn rate from month-to-date counter: {usage_taka_this_month} Tk / {current_day} days")
+
+            # Fallback: last COMPLETE month row from comparison table (current month row is "N/A" until DESCO finalizes it)
+            if not daily_burn_rate:
+                tables = driver.find_elements(By.XPATH, "//table[contains(., 'Consumed')]")
+                for table in tables:
+                    headers = [h.text.strip().lower() for h in table.find_elements(By.XPATH, ".//th")]
+                    target_idx = None
+                    for i, h in enumerate(headers):
+                        if "consumed" in h and ("tk" in h or "taka" in h) and "this" in h:
+                            target_idx = i
+                            break
+                    if target_idx is None:
+                        continue
+                    rows = table.find_elements(By.XPATH, ".//tbody//tr")
+                    for row in rows:
+                        cells = row.find_elements(By.TAG_NAME, "td")
+                        if len(cells) <= target_idx:
+                            continue
+                        val_text = cells[target_idx].text.strip().replace(',', '')
+                        try:
+                            month_taka = float(val_text)
+                        except ValueError:
+                            continue  # this row is "N/A" (current unfinalized month) — try next row
+                        if month_taka > 0:
+                            daily_burn_rate = month_taka / 30  # approx days in a month
+                            logger.info(f"Burn rate fallback from last complete month: {month_taka} Tk / 30 days")
+                            break
+                    if daily_burn_rate:
+                        break
+
+            if daily_burn_rate and daily_burn_rate > 0:
+                predicted_days = balance / daily_burn_rate
+                days_remaining_str = f"~{round(predicted_days, 1)} days"
+            else:
+                logger.warning("Could not establish a daily burn rate from any data source.")
         except Exception as table_err:
-            logger.warning(f"Failed parsing comparative data table for burn predictions: {table_err}")
+            logger.warning(f"Failed parsing burn rate predictions: {table_err}")
 
         # FINAL DATA EXTRACTION
         page_text = driver.find_element(By.TAG_NAME, "body").text
