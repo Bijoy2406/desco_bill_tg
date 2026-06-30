@@ -165,16 +165,16 @@ def fetch_desco_data(customer_id, loop=None, progress_callback=None):
 
         # SMART POLLING LOOP FOR HISTORICAL DATA TABLES
         logger.info("Waiting for slow historical elements and comparative tables to populate...")
-        max_wait = 30
+        max_wait = 35
         elapsed = 0
 
         while elapsed < max_wait:
             page_text = driver.find_element(By.TAG_NAME, "body").text
             
-            # Check if BOTH the recharge block and comparative tables are available in structural text
-            if re.search(r"Last Recharge:\s*\d+", page_text) and "Consumed Taka" in page_text:
+            # Using looser matching ("Consumed") to safely grab the dynamic comparison table layout
+            if re.search(r"Last Recharge:\s*\d+", page_text) and "Consumed" in page_text:
                 logger.info(f"All dynamic tables successfully populated after {elapsed} seconds!")
-                time.sleep(1.5) # Structural buffer sleep to let rows settle completely
+                time.sleep(2.5) # Expanded buffer to guarantee all dynamic script injections finish mounting
                 break
                 
             time.sleep(2)
@@ -185,8 +185,8 @@ def fetch_desco_data(customer_id, loop=None, progress_callback=None):
         # PREDICTIVE ALGORITHM EXTRACTION: Read the Comparative Data Table
         days_remaining_str = "N/A"
         try:
-            # Locate the comparative data table rows directly
-            table_rows = driver.find_elements(By.XPATH, "//table[contains(., 'Consumed Taka')]//tbody//tr")
+            # Using an optimized XPath to look for any table with "Consumed" anywhere in its structural header text
+            table_rows = driver.find_elements(By.XPATH, "//table[contains(., 'Consumed')]//tbody//tr")
             if table_rows:
                 # The first row inside tbody holds the data for the most recent/current month
                 first_row_cells = table_rows[0].find_elements(By.TAG_NAME, "td")
@@ -242,6 +242,7 @@ def fetch_desco_data(customer_id, loop=None, progress_callback=None):
     finally:
         if driver:
             driver.quit()
+
 # --- BOT ONBOARDING & COMMAND HANDLERS ---
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
