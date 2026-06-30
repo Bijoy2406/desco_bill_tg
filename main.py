@@ -181,7 +181,10 @@ def fetch_desco_data(customer_id, loop=None, progress_callback=None):
             page_text = driver.find_element(By.TAG_NAME, "body").text
             
             # Using looser matching ("Consumed") to safely grab the dynamic comparison table layout
-            if re.search(r"Last Recharge:\s*\d+", page_text) and "Consumed" in page_text:
+            if (re.search(r"Last Recharge:\s*[\d,.]+", page_text)
+                    and "Recharge time:" in page_text
+                    and "in BDT:" in page_text
+                    and "Consumed" in page_text):
                 logger.info(f"All dynamic tables successfully populated after {elapsed} seconds!")
                 time.sleep(2.5) # Expanded buffer to guarantee all dynamic script injections finish mounting
                 break
@@ -241,6 +244,7 @@ def fetch_desco_data(customer_id, loop=None, progress_callback=None):
 
         # FINAL DATA EXTRACTION
         page_text = driver.find_element(By.TAG_NAME, "body").text
+        logger.info(f"DEBUG raw snippet: {page_text[:600]!r}")
         recharge_amt_match = re.search(r"Last Recharge:\s*([\s\S]*?)\s*(?=Recharge time)", page_text)
         recharge_time_match = re.search(r"Recharge time:\s*([\s\S]*?)\s*(?=Remaining Balance|Reading time|Used This Month|Max load|$)", page_text)
 
